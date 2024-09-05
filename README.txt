@@ -1,1 +1,0 @@
-O jogo está "Pronto" mais ainda pretendo fazer mudanças nele, pra deixar ele melhor
