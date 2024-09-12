@@ -1,1 +1,0 @@
-Esse aqui é um jogo de adivinhar números, isso mesmo, no plural, tive a ideia a partir de um joguinho bem fácil de fazer que vi em uma aula de Python na faculdade, e decidi que estava muito afim passar uns 2 dias fazendo algo bem mais complexo só pq sim (Estou enlouquecendo >:D) 
