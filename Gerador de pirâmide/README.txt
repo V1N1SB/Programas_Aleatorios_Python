@@ -1,1 +1,0 @@
-Essa código é tão simples que eu nem fiz nenhum comentário explicativo, fiz em aproximadamente 1 hora (contando com procrastinação)
