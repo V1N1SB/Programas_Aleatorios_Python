@@ -3,12 +3,13 @@ from collections import deque
 
 # essa ideia pode parecer muito difícil na minha cabeça, mas na realidade pode ser q seja mesmo, mass eu quero fazer um jogo da velha infinito e com um bot, ou seja apartir de sla quantas jogadas, vou decidir ainda, ele vai começar a apagar as jogadas, deixando só as mais recentes, isso pra nunca dar velha
 
-# 1º passo dessa coisa, fazer o tabaleiro, não me parece difícil
-# 2º passo desse treco, entender como eu vou fazer pra realizar uma jogada, lista de 3x3 pra fazer o tabaleiro não deve ser tão difícil criar essa jogadas
-# 3º passo desse estresse, criar uma função pra alternar as jogadas entre mim e o BOT, ou entre mim e o outro player
+# 1º passo dessa coisa, fazer o tabaleiro, não me parece difícil == Feito
+# 2º passo desse treco, entender como eu vou fazer pra realizar uma jogada, lista de 3x3 pra fazer o tabaleiro não deve ser tão difícil criar essa jogadas == Feito
+# 3º passo desse estresse, criar uma função pra alternar as jogadas entre mim e o BOT, ou entre mim e o outro player == Feito
 # 4º passo dessa saco, criar a o bot, posso fazer ele em várias dificuldades, sendo fácil: ele só colcando em qualquer lugar alatório bem besta; Médio: sendo ele já com uma certa lógica colocando as coisas, (vou usar provavelmente minimax); E o Difícil: vai ser o caba q vai ter a maior porcentagem de acerto nessa jossa, ele vai ser bão pakas e só tenho a dizer isso, porém n posso fazer ele impossível, mas com certeza não vai ser fácil ganhar
 
 #Atulmente vou inicializar ele aqui memo, dps eu mudo
+
 modo_infinito_padrao = False
 
 def menu_inicial(infinito):
@@ -328,8 +329,3 @@ def jogo(jogador1, jogador2, infinito):
         print(f'{tabuleiro[i][0]}|{tabuleiro[i][1]}|{tabuleiro[i][2]}')
 
 menu_inicial(modo_infinito_padrao)
-
-#NOTAS: Atualmene o jogo funciona como um jogo da velha normal, poréeeem, preciso fazer de um jeito q não exista empate
-#Sei que é uma ideia meio maluca, mas toda vez q ele chegue ali na sua quarta jogada, o a sua primeira jogada tem q desaparecer
-#'Aaah mas como vc vai fazer isso' atualmente tenho algumas ideias mas tenho q botar pra testar, mas por agora temos um jogo da velha funcional
-#E depois de tornar ele 'infinito', vou começar a trabalhar nos bots (parte q eu devo passar a maior parte do tempo)
