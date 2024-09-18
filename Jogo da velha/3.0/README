@@ -1,0 +1,25 @@
+=== MODO CONTRA BOT ===
+
+Finalmente, vou dar a opção de jogar contra um bot. O que isso significa? Vou explicar mais abaixo.
+
+Minimax:
+O Minimax é um algoritmo recursivo usado principalmente em jogos de tabuleiro de soma zero (como xadrez ou jogo da velha). Seu objetivo é encontrar a jogada ótima para um jogador, assumindo que o oponente também joga de forma perfeita.  
+O algoritmo simula todas as jogadas possíveis a partir de um estado inicial do jogo, criando uma árvore de decisões, onde cada nó representa um estado do jogo e cada aresta, uma jogada.  
+No turno do jogador, o algoritmo escolhe a jogada que maximiza o valor (maximiza a chance de vitória). No turno do oponente, o algoritmo escolhe a jogada que minimiza o valor (minimiza a chance de vitória do jogador atual).  
+Cada folha da árvore de decisões é avaliada com uma função de avaliação, que atribui um valor a cada situação do jogo (vitória, derrota, empate). A partir das folhas, o algoritmo sobe os valores pela árvore, escolhendo o melhor caminho (max ou min) até chegar à raiz, onde está a decisão final.
+
+Poda Alfa-Beta: 
+A poda Alfa-Beta é uma otimização que reduz a quantidade de nós avaliados pelo Minimax sem alterar o resultado.  
+Ela introduz dois parâmetros, "ALFA" e "BETA", que representam os limites superiores e inferiores das melhores jogadas possíveis já encontradas:
+
+- Alfa: O melhor valor que o jogador Max pode garantir.
+- Beta: O melhor valor que o jogador Min pode garantir.
+
+A ideia é que, enquanto o algoritmo percorre a árvore de jogadas, ele verifica se vale a pena continuar explorando um determinado ramo. Se encontrar um valor que seja pior do que uma jogada já avaliada anteriormente, ele "poda" esse ramo (ignora as jogadas abaixo desse ponto), pois sabe que o oponente não escolheria esse caminho.  
+Isso economiza tempo de execução, permitindo que o algoritmo avalie muito menos posições.
+
+Exemplo de como funcionam juntos:
+1. O algoritmo começa com o turno do jogador Max.  
+2. Ele simula todas as possíveis jogadas e chama o Minimax de forma recursiva para cada uma delas.  
+3. Nos turnos do oponente Min, ele busca minimizar o valor.  
+4. A poda Alfa-Beta ocorre quando um ramo não precisa ser explorado porque já foi determinada uma jogada melhor em outra parte da árvore.
